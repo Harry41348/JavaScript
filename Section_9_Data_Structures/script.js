@@ -28,15 +28,33 @@ const restaurant = {
   },
 };
 
+// Flights exercise
+
+const flightRows = flights.split('+');
+
+for (const flight of flightRows) {
+  const flightRows = flight.split(';');
+  let outputStr =
+    flightRows[0].replace(/_/g, ' ').trim() +
+    ' from ' +
+    flightRows[1].substr(0, 3).toUpperCase() +
+    ' to ' +
+    flightRows[2].substr(0, 3).toUpperCase() +
+    ' (' +
+    flightRows[3].replace(':', 'h') +
+    ')';
+  console.log(outputStr.padStart(50, ' '));
+}
+
 // Splitting
 
-console.log('This+is+my+string'.split('+'));
+/*console.log('This+is+my+string'.split('+'));
 console.log('Harry Wijnschenk'.split(' '));
 
 const [firstName, lastName] = 'Harry Wijnschenk'.split(' ');
 
 const newName = ['Mr', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+console.log(newName);*/
 
 // Working with strings
 /*
